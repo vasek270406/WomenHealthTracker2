@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    android:orientation="horizontal"
+    android:background="@color/white"
+    android:gravity="center"
+    android:weightSum="4">
+
+    <!-- Кнопка настроек -->
+    <ImageButton
+        android:id="@+id/settingsButton"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:src="@android:drawable/ic_menu_preferences"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:contentDescription="Настройки"
+        android:padding="4dp"
+        android:scaleType="fitCenter"
+        android:minWidth="48dp"
+        android:minHeight="48dp" />
+
+    <!-- Кнопка календаря -->
+    <ImageButton
+        android:id="@+id/calendarButton"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:src="@android:drawable/ic_menu_today"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:contentDescription="Календарь"
+        android:padding="4dp"
+        android:scaleType="fitCenter"
+        android:minWidth="48dp"
+        android:minHeight="48dp" />
+
+    <!-- Кнопка уведомлений -->
+    <ImageButton
+        android:id="@+id/notificationsButton"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:src="@android:drawable/ic_menu_view"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:contentDescription="Уведомления"
+        android:padding="4dp"
+        android:scaleType="fitCenter"
+        android:minWidth="48dp"
+        android:minHeight="48dp" />
+
+    <!-- Кнопка профиля -->
+    <ImageButton
+        android:id="@+id/profileButton"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:src="@android:drawable/ic_menu_myplaces"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:contentDescription="Профиль"
+        android:padding="4dp"
+        android:scaleType="fitCenter"
+        android:minWidth="48dp"
+        android:minHeight="48dp" />
+
+</LinearLayout>
+
+
+

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "417371062408",
+    "project_id": "womenht2",
+    "storage_bucket": "womenht2.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:417371062408:android:1968ba9ed6f014ceb71f3d",
+        "android_client_info": {
+          "package_name": "com.example.womenhealthtracker"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBZWDOmIfm5jqrc6b-TSmt0FMxW-ZH2FC0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

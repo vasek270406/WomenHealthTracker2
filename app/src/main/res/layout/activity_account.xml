@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/pink_background">
+
+    <!-- Toolbar с кнопкой назад -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/white"
+        android:elevation="4dp"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+    <!-- Заголовок "Аккаунт" -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="30dp"
+        android:text="Аккаунт"
+        android:textColor="#000000"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        android:fontFamily="sans-serif" />
+
+    <!-- ScrollView для прокручиваемого контента -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp"
+            android:gravity="center">
+
+            <!-- Поле "Ваше имя:" -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginBottom="20dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ваше имя:"
+                    android:textColor="#000000"
+                    android:textSize="16sp"
+                    android:layout_marginBottom="8dp"
+                    android:fontFamily="sans-serif" />
+                <EditText
+                    android:id="@+id/nameEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:background="@drawable/field_light_green"
+                    android:padding="16dp"
+                    android:textSize="16sp"
+                    android:hint=""
+                    android:fontFamily="sans-serif" />
+            </LinearLayout>
+
+            <!-- Поле "Ваш возраст:" -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginBottom="20dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ваш возраст:"
+                    android:textColor="#000000"
+                    android:textSize="16sp"
+                    android:layout_marginBottom="8dp"
+                    android:fontFamily="sans-serif" />
+                <EditText
+                    android:id="@+id/ageEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:background="@drawable/field_light_green"
+                    android:padding="16dp"
+                    android:inputType="number"
+                    android:textSize="16sp"
+                    android:hint="Выберите возраст"
+                    android:clickable="true"
+                    android:focusable="false"
+                    android:fontFamily="sans-serif" />
+            </LinearLayout>
+
+            <!-- Поле "Средняя длина цикла:" -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginBottom="20dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Средняя длина цикла:"
+                    android:textColor="#000000"
+                    android:textSize="16sp"
+                    android:layout_marginBottom="8dp"
+                    android:fontFamily="sans-serif" />
+                <EditText
+                    android:id="@+id/cycleLengthEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:background="@drawable/field_light_green"
+                    android:padding="16dp"
+                    android:inputType="number"
+                    android:textSize="16sp"
+                    android:hint=""
+                    android:fontFamily="sans-serif" />
+            </LinearLayout>
+
+            <!-- Заголовок "Выберите режим" -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Выберите режим:"
+                    android:textColor="#000000"
+                    android:textSize="16sp"
+                    android:layout_marginBottom="8dp"
+                    android:fontFamily="sans-serif" />
+            
+            <!-- Текущий режим -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="2dp"
+                android:backgroundTint="#FFFFFF">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Текущий режим"
+                        android:textColor="#666666"
+                        android:textSize="14sp"
+                        android:layout_marginBottom="8dp"
+                        android:fontFamily="sans-serif" />
+
+                    <TextView
+                        android:id="@+id/currentModeTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Отслеживание цикла"
+                        android:textColor="#000000"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="4dp"
+                        android:fontFamily="sans-serif" />
+
+                    <TextView
+                        android:id="@+id/currentModeDescriptionTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Регулярные менструальные циклы"
+                        android:textColor="#666666"
+                        android:textSize="14sp"
+                        android:fontFamily="sans-serif" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+            <!-- Кнопка "Сменить режим" -->
+            <Button
+                android:id="@+id/changeModeButton"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/button_pink_rounded"
+                android:text="Сменить режим"
+                android:textAllCaps="false"
+                android:textColor="#000000"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif" />
+
+            <!-- Кнопка "Продолжить" -->
+            <Button
+                android:id="@+id/continueButton"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/button_pink_rounded"
+                android:text="Продолжить"
+                android:textAllCaps="false"
+                android:textColor="#000000"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif" />
+
+            <!-- Кнопка "Выйти из аккаунта" -->
+            <Button
+                android:id="@+id/logoutButton"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/button_pink_rounded"
+                android:text="Выйти из аккаунта"
+                android:textAllCaps="false"
+                android:textColor="#000000"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Разделительная линия -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#CCCCCC" />
+
+    <!-- Нижняя навигационная панель -->
+    <include layout="@layout/bottom_navigation" />
+
+</LinearLayout>
+

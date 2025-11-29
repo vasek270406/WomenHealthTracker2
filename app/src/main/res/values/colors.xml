@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="pink_background">#FFE0E6</color>
+    <color name="light_green_card">#E5EEB2</color>
+    <color name="pink_button">#FFE0E6</color>
+    <color name="period_current">#E5EEB2</color>
+    <color name="period_previous">#EEACAD</color>
+    <color name="ovulation">#FFB6C1</color>
+    <color name="luteal">#F9FFD7CF</color>
+</resources>

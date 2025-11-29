@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/pink_background"
+    android:padding="24dp"
+    android:gravity="center">
+
+    <!-- Заголовок -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Счетчик шевелений"
+        android:textColor="#000000"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="40dp"
+        android:fontFamily="sans-serif" />
+
+    <!-- Карточка с счетчиком -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="24dp"
+        app:cardBackgroundColor="@color/light_green_card"
+        app:cardElevation="0dp"
+        android:layout_marginBottom="32dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="32dp"
+            android:gravity="center">
+
+            <!-- Таймер -->
+            <TextView
+                android:id="@+id/timerTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="00:00"
+                android:textColor="#000000"
+                android:textSize="48sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="40dp"
+                android:fontFamily="sans-serif" />
+
+            <!-- Счетчик шевелений -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Шевелений:"
+                android:textColor="#000000"
+                android:textSize="20sp"
+                android:layout_marginBottom="8dp"
+                android:fontFamily="sans-serif" />
+
+            <TextView
+                android:id="@+id/kickCountTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textColor="#000000"
+                android:textSize="72sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="40dp"
+                android:fontFamily="sans-serif" />
+
+            <!-- Кнопка "Шевеление" -->
+            <Button
+                android:id="@+id/kickButton"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:background="@drawable/button_pink_rounded"
+                android:text="Шевеление 👶"
+                android:textAllCaps="false"
+                android:textColor="#000000"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif" />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <!-- Кнопки управления -->
+    <Button
+        android:id="@+id/startButton"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:layout_marginBottom="12dp"
+        android:background="@drawable/button_yellow_green"
+        android:text="Начать отсчет"
+        android:textAllCaps="false"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:fontFamily="sans-serif" />
+
+    <Button
+        android:id="@+id/stopButton"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:layout_marginBottom="12dp"
+        android:background="@drawable/button_yellow_green"
+        android:text="Остановить"
+        android:textAllCaps="false"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:enabled="false"
+        android:fontFamily="sans-serif" />
+
+    <Button
+        android:id="@+id/backButton"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:background="@drawable/button_pink_rounded"
+        android:text="Назад"
+        android:textAllCaps="false"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:fontFamily="sans-serif" />
+
+    <!-- Информация -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Считайте шевеления до 10. Обычно это занимает 10-30 минут."
+        android:textColor="#000000"
+        android:textSize="14sp"
+        android:layout_marginTop="24dp"
+        android:gravity="center"
+        android:fontFamily="sans-serif" />
+
+</LinearLayout>
+

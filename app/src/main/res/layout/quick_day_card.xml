@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <TextView
+        android:id="@+id/dateTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Дата"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="#000000"
+        android:paddingBottom="12dp" />
+
+    <TextView
+        android:id="@+id/forecastTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Прогнозы"
+        android:textSize="14sp"
+        android:textColor="#666666"
+        android:paddingBottom="8dp" />
+
+    <TextView
+        android:id="@+id/energyTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Энергия"
+        android:textSize="14sp"
+        android:textColor="#666666"
+        android:paddingBottom="8dp" />
+
+    <TextView
+        android:id="@+id/symptomsTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Симптомы"
+        android:textSize="14sp"
+        android:textColor="#666666"
+        android:paddingBottom="16dp" />
+
+    <Button
+        android:id="@+id/addSymptomsButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Добавить симптомы"
+        android:textAllCaps="false"
+        android:layout_marginBottom="8dp" />
+
+    <Button
+        android:id="@+id/addPeriodButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Отметить начало цикла"
+        android:textAllCaps="false"
+        android:layout_marginBottom="8dp" />
+
+    <Button
+        android:id="@+id/addSexButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Отметить ПА"
+        android:textAllCaps="false"
+        android:layout_marginBottom="8dp" />
+
+    <Button
+        android:id="@+id/viewDetailsButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Подробнее"
+        android:textAllCaps="false" />
+
+</LinearLayout>
+
+
+
+
+
+

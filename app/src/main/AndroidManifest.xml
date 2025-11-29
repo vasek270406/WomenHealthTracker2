@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
+    <uses-permission android:name="android.permission.USE_EXACT_ALARM" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+        tools:targetApi="31">
+
+        <!-- FileProvider для безопасного доступа к файлам -->
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <!-- Главная активность (экран приветствия) -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Активность регистрации -->
+        <activity
+            android:name=".SignUpActivity"
+            android:exported="false" />
+
+        <!-- Активность авторизации -->
+        <activity
+            android:name=".LoginActivity"
+            android:exported="false" />
+
+        <!-- Активность аккаунта -->
+        <activity
+            android:name=".AccountActivity"
+            android:exported="false" />
+
+        <!-- Активность календаря -->
+        <activity
+            android:name=".CalendarActivity"
+            android:exported="false" />
+
+        <!-- Активность настроек -->
+        <activity
+            android:name=".SettingsActivity"
+            android:exported="false" />
+
+        <!-- Активность уведомлений -->
+        <activity
+            android:name=".NotificationsActivity"
+            android:exported="false" />
+
+        <!-- Активность разрешений -->
+        <activity
+            android:name=".PermissionsActivity"
+            android:exported="false" />
+
+        <!-- Активность полного календаря -->
+        <activity
+            android:name=".FullCalendarActivity"
+            android:exported="false" />
+
+        <!-- Активность трекера симптомов -->
+        <activity
+            android:name=".SymptomTrackerActivity"
+            android:exported="false" />
+
+        <!-- Активность статистики -->
+        <activity
+            android:name=".StatisticsActivity"
+            android:exported="false" />
+
+        <!-- Активность статистики беременности -->
+        <activity
+            android:name=".PregnancyStatisticsActivity"
+            android:exported="false" />
+
+        <!-- Активность полной статистики беременности -->
+        <activity
+            android:name=".PregnancyStatisticsFullActivity"
+            android:exported="false" />
+
+        <!-- Активность анализа задержки -->
+        <activity
+            android:name=".DelayAnalysisActivity"
+            android:exported="false" />
+
+        <!-- Активность вида недели -->
+        <activity
+            android:name=".WeekViewActivity"
+            android:exported="false" />
+
+        <!-- Активность выбора целей (онбординг) -->
+        <activity
+            android:name=".GoalsActivity"
+            android:exported="false" />
+
+        <!-- Активность настройки цикла (онбординг) -->
+        <activity
+            android:name=".CycleSetupActivity"
+            android:exported="false" />
+
+        <!-- Активности трекинга -->
+        <activity
+            android:name=".PhysicalSymptomsActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".EmotionalSymptomsActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".ActivityTrackerActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".HabitsTrackerActivity"
+            android:exported="false" />
+
+        <!-- Активность быстрого добавления -->
+        <activity
+            android:name=".QuickAddActivity"
+            android:exported="false" />
+
+        <!-- Активность настройки беременности -->
+        <activity
+            android:name=".PregnancySetupActivity"
+            android:exported="false" />
+
+        <!-- Активность счетчика шевелений -->
+        <activity
+            android:name=".KickCounterActivity"
+            android:exported="false" />
+
+        <!-- Активность визита к врачу -->
+        <activity
+            android:name=".DoctorVisitActivity"
+            android:exported="false" />
+
+        <!-- Активность симптомов беременности -->
+        <activity
+            android:name=".PregnancySymptomsActivity"
+            android:exported="false" />
+
+        <!-- Активность фото УЗИ -->
+        <activity
+            android:name=".UltrasoundActivity"
+            android:exported="false" />
+
+        <!-- Активности менопаузы -->
+        <activity
+            android:name=".MenopauseHomeActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".MenopauseSymptomsActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".MenopauseDoctorVisitActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".MenopauseStatsActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".MenopauseDoctorVisitBookingActivity"
+            android:exported="false" />
+
+        <!-- Активность полной статистики менопаузы -->
+        <activity
+            android:name=".MenopauseStatisticsFullActivity"
+            android:exported="false" />
+
+        <!-- Receiver для уведомлений -->
+        <receiver
+            android:name=".NotificationReceiver"
+            android:exported="false"
+            android:enabled="true" />
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+
+    </application>
+
+</manifest>
